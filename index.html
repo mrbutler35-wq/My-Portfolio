@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larry Butler - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+        }
+
+        header nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .contact-info {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        .hero .contact-info p {
+            margin: 0.3rem 0;
+        }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        section h3 {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .job-dates {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .summary, .project-description {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            line-height: 1.8;
+        }
+
+        .skills-category {
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-category h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .skills-category p {
+            margin-left: 1rem;
+        }
+
+        .project-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+
+        .project-item h4 {
+            color: #667eea;
+            margin-bottom: 0.3rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <h1>Larry Butler</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Larry Butler</h2>
+        <div class="contact-info">
+            <p>Weeki Wachee, FL | (352) 606-8584 | Mrbutler35@gmail.com</p>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary">
+        <h2>Professional Summary</h2>
+        <div class="summary">
+            <p>Data-driven engineering professional combining 7+ years of manufacturing, quality systems, PLM, and CNC experience with strong skills in Python, data analysis, and machine learning. Experienced in AS9100/ISO compliance, process optimization, KPI tracking, and workflow automation. Skilled at transforming messy real-world data into insights using Python, Pandas, and Jupyter Notebook. Seeking a role where data analysis, engineering knowledge, and problem-solving intersect to improve operations.</p>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-category">
+            <h4>Programming & Data Analysis</h4>
+            <p>Python, Pandas, NumPy, Jupyter Notebook, Data Cleaning, Data Analysis, Feature Engineering, Machine Learning Fundamentals, Statistical Analysis</p>
+        </div>
+        <div class="skills-category">
+            <h4>Manufacturing & Quality Systems</h4>
+            <p>KPI Tracking, Teamcenter PLM, SAP ERP, BOM Management, AS9100, ISO 9001 Quality Systems, Root Cause Analysis, Lean Manufacturing</p>
+        </div>
+        <div class="skills-category">
+            <h4>Technical Operations</h4>
+            <p>CNC Programming, Process Optimization, Manufacturing, AOI Inspections</p>
+        </div>
+    </section>
+
+    <!-- Data and AI Projects Section -->
+    <section id="projects">
+        <h2>Data and AI Projects</h2>
+        <div class="project-item">
+            <h4>IMDB Data Analysis Project (TripleTen)</h4>
+            <ul>
+                <li>Cleaned, validated, and standardized real-world datasets using Pandas</li>
+                <li>Built reusable functions for decade filtering, score categorization, and actor extraction</li>
+                <li>Generated insights from top-rated IMDB content through filtering and analysis</li>
+                <li>Used Jupyter Notebook to structure workflow, visualize data, and maintain reproducibility</li>
+                <li>Strengthened debugging, feature engineering, and data storytelling capabilities</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        
+        <div class="experience-item">
+            <h3>Manzi Metals Inc</h3>
+            <p><span class="job-title">Quality Assurance Engineer</span> <span class="job-dates">2024 - Present</span></p>
+            <ul>
+                <li>Perform receiving inspections, validate certifications, and maintain AS9100/ISO compliance</li>
+                <li>Analyze KPIs to identify inefficiencies and recommend improvements</li>
+                <li>Resolve quality issues using root cause analysis and supplier communication</li>
+                <li>Support BOM accuracy and engineering change control</li>
+                <li>Balance cost, quality, and customer satisfaction</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Manzi Metals Inc</h3>
+            <p><span class="job-title">Sales Representative</span> <span class="job-dates">2024 - Present</span></p>
+            <ul>
+                <li>Performed receiving inspections, validated certifications, and maintained AS9100/ISO compliance</li>
+                <li>Analyzed KPIs to identify inefficiencies and recommended improvements, leading to streamlined operations</li>
+                <li>Resolved quality issues using root cause analysis and supplier communication, improving product reliability</li>
+                <li>Supported a 1 million dollar NASA supply program with full documentation compliance</li>
+                <li>Implemented PLM and ERP data strategies improving cross-department workflow</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Keller Williams Realty</h3>
+            <p><span class="job-title">Licensed Realtor</span> <span class="job-dates">2023 - Present</span></p>
+            <ul>
+                <li>Negotiated contracts valued at over industry averages while ensuring compliance with real estate regulations</li>
+                <li>Conducted financial and market analysis using statistical methods and tools like Python and Jupyter Notebook</li>
+                <li>Offered clients insights that informed investment decisions</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Spartronics</h3>
+            <p><span class="job-title">SMT Operator & Quality Inspector</span> <span class="job-dates">2023 - 2024</span></p>
+            <ul>
+                <li>Operated SMT machinery following IPC and aerospace standards</li>
+                <li>Conducted AOI inspections and corrective actions to reduce defects</li>
+                <li>Implemented Lean Manufacturing techniques to enhance product quality</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Mettler-Toledo</h3>
+            <p><span class="job-title">Processing Engineer / BOM Coordinator / CNC Programmer / Plastics Operator Lead</span> <span class="job-dates">2017 - 2023</span></p>
+            <ul>
+                <li>Ensured BOM accuracy using SAP ERP and Teamcenter, reducing errors</li>
+                <li>Performed data analytics to remove bottlenecks, increasing efficiency by 25%</li>
+                <li>Programmed CNC machines and optimized machining workflows</li>
+                <li>Facilitated engineering validation and updated documentation using AS9100 standards</li>
+                <li>Supervised production teams to ensure compliance with safety and quality standards</li>
+                <li>Led lean projects utilizing CNC programming and process optimization techniques</li>
+                <li>Reduced scrap and downtime, improving operational efficiency</li>
+                <li>Supported BOM accuracy and engineering change control, boosting production efficiency</li>
+                <li>Balanced cost, quality, and customer satisfaction through effective manufacturing strategies</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <h3>Plastics Operator Lead</h3>
+            <p><span class="job-dates">2017 - 2020 (Mettler-Toledo)</span></p>
+            <ul>
+                <li>Supervised production teams to ensure compliance with safety and quality standards</li>
+                <li>Led lean projects utilizing CNC programming and process optimization techniques</li>
+                <li>Reduced scrap and downtime, improving operational efficiency</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="experience-item">
+            <h3>TripleTen School</h3>
+            <p><span class="job-title">Certificate, AI and Machine Learning</span> <span class="job-dates">2025</span></p>
+        </div>
+        <div class="experience-item">
+            <h3>University of Michigan</h3>
+            <p><span class="job-title">Bachelor of Business Administration</span> <span class="job-dates">Aug 2004 - May 2011</span></p>
+        </div>
+        <div class="experience-item">
+            <h3>Nature Coast Real Estate School</h3>
+            <p><span class="job-title">Certificate, Real Estate Sales</span> <span class="job-dates">Oct 2023 - Dec 2023</span></p>
+        </div>
+    </section>
+
+    <!-- Highlights and Achievements Section -->
+    <section id="highlights">
+        <h2>Highlights and Achievements</h2>
+        <ul>
+            <li><strong>Manzi Metals:</strong> Improved operational efficiency by 30% through targeted process optimization</li>
+            <li><strong>Manzi Metals:</strong> Supported a 1 million dollar NASA supply program with full documentation compliance</li>
+            <li><strong>Mettler-Toledo:</strong> Increased efficiency by 25% through data analytics and bottleneck removal</li>
+            <li><strong>Mettler-Toledo:</strong> Implemented PLM and ERP data strategies improving cross-department workflow</li>
+            <li><strong>Spartronics:</strong> Reduced recurring defects through AOI inspection improvements</li>
+            <li><strong>Across all roles:</strong> Recognized for accuracy, leadership, and problem-solving under pressure</li>
+        </ul>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>AI and Machine Learning Certificate (In Progress): TripleTen School</li>
+            <li>Real Estate Sales Certificate: Nature Coast Real Estate School</li>
+        </ul>
+    </section>
+</body>
+</html>
