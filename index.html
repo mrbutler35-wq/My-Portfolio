@@ -453,6 +453,15 @@
     .cert-card,
     .highlight-card {
       padding: 22px;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .edu-card:hover,
+    .cert-card:hover,
+    .highlight-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(73, 230, 255, 0.38);
+      box-shadow: 0 0 30px rgba(73, 230, 255, 0.18), 0 0 55px rgba(139, 92, 246, 0.12);
     }
 
     .subtle {
@@ -533,10 +542,8 @@
         <div class="brand">Larry <span>Butler</span></div>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -709,8 +716,74 @@
               <li>Performed exploratory analysis to identify top-rated content patterns</li>
               <li>Documented work clearly in Jupyter Notebook for readability and reproducibility</li>
               <li>Strengthened debugging, data storytelling, and analytical reasoning skills</li>
+          <article class="panel project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Machine Learning API</div>
+                <h3>House Price Prediction API</h3>
+              </div>
+            </div>
+            <p>
+              Built a FastAPI application to predict U.S. housing prices using machine learning.
+            </p>
+            <ul>
+              <li>Includes endpoints for predictions, model info, and health checks</li>
+              <li>Uses scikit-learn, joblib, and REST API structure</li>
+              <li>Containerized with Docker for deployment</li>
             </ul>
+            <div class="hero-actions" style="margin-top: 10px;">
+              <a class="btn secondary" href="https://github.com/mrbutler35-wq/house_price_api" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
           </article>
+
+          <article class="panel project-card">
+            <div class="project-top">
+              <div>
+                <div class="project-type">Machine Learning</div>
+                <h3>Beta Bank ML Project</h3>
+              </div>
+            </div>
+            <p>
+              Machine learning model to predict customer churn for improving retention strategies.
+            </p>
+            <ul>
+              <li>Includes data preprocessing, feature engineering, and model evaluation</li>
+              <li>Focus on predictive analytics using scikit-learn and Python</li>
+            </ul>
+            <div class="hero-actions" style="margin-top: 10px;">
+              <a class="btn secondary" href="https://github.com/mrbutler35-wq/Beta-Bank-project" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="container">
+        <h2 class="section-title"><span class="section-icon">🏆</span>Certifications</h2>
+        <div class="grid-2">
+          <div class="panel cert-card">
+            <h3>AI Fundamentals and the Cloud</h3>
+            <p>Issuer: Coursera / Amazon Web Services</p>
+            <div class="hero-actions" style="margin-top: 10px;">
+              <a class="btn secondary" href="https://coursera.org/share/77ba913e18a212b61d3d6ca14158d823" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+          </div>
+          <div class="panel cert-card">
+            <h3>AWS Services for AI Solutions</h3>
+            <p>Issuer: Coursera / Amazon Web Services</p>
+            <div class="hero-actions" style="margin-top: 10px;">
+              <a class="btn secondary" href="https://coursera.org/share/8183c187b078c9573710949cd5ed691d" target="_blank" rel="noopener noreferrer">View Certificate</a>
+            </div>
+          </div>
+          <div class="panel cert-card">
+            <h3>AI and Machine Learning Program</h3>
+            <p>Issuer: TripleTen</p>
+          </div>
+          <div class="panel cert-card">
+            <h3>Real Estate Sales Certificate</h3>
+            <p>Issuer: Nature Coast Real Estate School</p>
+          </div>
         </div>
       </div>
     </section>
@@ -803,7 +876,7 @@
 
     <section id="education">
       <div class="container">
-        <h2 class="section-title"><span class="section-icon">◎</span>Education & Certifications</h2>
+        <h2 class="section-title"><span class="section-icon">◎</span>Education</h2>
         <div class="grid-3">
           <div class="panel edu-card">
             <h3>TripleTen</h3>
@@ -819,34 +892,6 @@
             <h3>Nature Coast Real Estate School</h3>
             <p>Certificate, Real Estate Sales</p>
             <p class="subtle">Oct 2023 - Dec 2023</p>
-          </div>
-        </div>
-
-        <div class="grid-2" style="margin-top: 18px;">
-          <div class="panel cert-card">
-            <h3>AI Focus</h3>
-            <ul class="mini-list">
-              <li>Python-based machine learning and analytics projects</li>
-              <li>Foundational exposure to generative AI, deep learning, and production-minded MLOps concepts</li>
-              <li>Strong interest in building reliable AI systems that solve operational and business problems</li>
-            </ul>
-          </div>
-          <div class="panel cert-card">
-            <h3>Certifications</h3>
-            <ul class="mini-list">
-              <li>AI and Machine Learning Program — TripleTen</li>
-              <li>Real Estate Sales Certificate — Nature Coast Real Estate School</li>
-              <li>IPC Certification</li>
-            </ul>
-          </div>
-
-          <div class="panel highlight-card">
-            <h3>Highlights</h3>
-            <ul class="mini-list">
-              <li>Blends manufacturing, quality, and operations experience with AI, analytics, and machine learning growth</li>
-              <li>Comfortable in documentation-heavy, detail-driven technical environments where reliability matters</li>
-              <li>Builds practical, business-focused solutions rather than theory-only projects</li>
-            </ul>
           </div>
         </div>
       </div>
