@@ -11,7 +11,119 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="canonical" href="/" />
   <link rel="preload" href="styles.css" as="style">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+/* Inlined styles.css - refined single-file stylesheet */
+:root {
+  --bg: #07111f;
+  --bg-soft: #0c1729;
+  --panel: rgba(10, 22, 39, 0.78);
+  --panel-border: rgba(86, 215, 255, 0.18);
+  --text: #e6f1ff;
+  --muted: #96a8c3;
+  --cyan: #49e6ff;
+  --blue: #4f8cff;
+  --purple: #8b5cf6;
+  --glow: 0 0 20px rgba(73, 230, 255, 0.14);
+  --radius: 18px;
+  --max: 1180px;
+  --break-sm: 760px;
+  --break-md: 980px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(79,140,255,0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(139,92,246,0.12), transparent 24%),
+    linear-gradient(180deg, #06101c 0%, #07111f 45%, #081423 100%);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+header { position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); background: rgba(7,17,31,0.72); border-bottom: 1px solid rgba(73,230,255,0.08); }
+nav { min-height: 76px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.brand { font-size:1.05rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; }
+.brand span { color:var(--cyan); }
+.nav-toggle { display:none; background:transparent; border:1px solid rgba(255,255,255,0.03); color:var(--muted); padding:8px 10px; border-radius:8px; }
+.nav-links { display:flex; gap:22px; }
+.nav-links ul { list-style:none; display:flex; gap:22px; align-items:center; }
+.nav-links a { color:var(--muted); font-size:0.95rem; text-decoration:none; }
+.nav-links a:hover { color:var(--cyan); }
+
+.hero { padding:72px 0 40px; }
+.hero-grid { display:grid; grid-template-columns:1.4fr 0.9fr; gap:28px; align-items:stretch; }
+.panel { background:var(--panel); border:1px solid var(--panel-border); border-radius:var(--radius); box-shadow:var(--glow); backdrop-filter:blur(8px); }
+.hero-main { padding:32px; position:relative; overflow:hidden; }
+.eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.14em; color:var(--cyan); margin-bottom:12px; }
+h1 { font-size:clamp(2rem,4.6vw,3.6rem); line-height:1.02; margin-bottom:12px; }
+.gradient-text { background:linear-gradient(90deg,#fff 0%,#7dd3fc 30%,#49e6ff 60%,#a78bfa 100%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.hero-role { font-size:1.02rem; color:#c5d7f2; margin-bottom:12px; }
+.hero-summary { color:var(--muted); max-width:760px; margin-bottom:18px; }
+.hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+.icon-badge { width:64px; height:64px; border-radius:14px; display:grid; place-items:center; font-size:1.25rem; font-weight:800; color:var(--cyan); border:1px solid rgba(73,230,255,0.14); }
+.btn { display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:10px; border:1px solid rgba(73,230,255,0.12); font-weight:700; }
+.btn.primary { background:linear-gradient(135deg, rgba(73,230,255,0.12), rgba(79,140,255,0.14)); color:var(--text); }
+.btn.secondary { background:rgba(255,255,255,0.02); color:var(--cyan); }
+
+.hero-side { padding:20px; display:grid; gap:14px; align-content:start; }
+.stat-card { background:rgba(255,255,255,0.02); border-radius:12px; padding:14px; border:1px solid rgba(255,255,255,0.03); }
+.stat-label { color:var(--muted); font-size:0.78rem; text-transform:uppercase; }
+.stat-value { font-size:1.15rem; font-weight:800; color:var(--cyan); }
+.stat-text { color:#c7d6ec; font-size:0.92rem; }
+
+.section-title { display:flex; align-items:center; gap:14px; margin-bottom:18px; font-size:1.4rem; }
+.section-icon { width:36px; height:36px; display:inline-grid; place-items:center; border-radius:8px; color:var(--cyan); }
+.about-box, .contact-box { padding:22px; }
+.about-box p, .contact-box p { color:var(--muted); }
+.grid-2, .grid-3 { display:grid; gap:16px; }
+.grid-2 { grid-template-columns:repeat(2,1fr); }
+.grid-3 { grid-template-columns:repeat(3,1fr); }
+.card { padding:20px; }
+.card h3 { margin-bottom:8px; }
+.skill-list { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+.tag { padding:6px 10px; border-radius:999px; font-size:0.88rem; color:#dbeafe; border:1px solid rgba(73,230,255,0.12); background:rgba(73,230,255,0.03); }
+
+.project-card { padding:20px; position:relative; overflow:hidden; transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease; }
+.project-card:hover { transform:translateY(-6px); box-shadow:0 8px 38px rgba(73,230,255,0.08); }
+.project-top { display:flex; justify-content:space-between; gap:12px; margin-bottom:8px; }
+.project-type { font-size:0.78rem; text-transform:uppercase; color:var(--cyan); }
+.project-card p { color:var(--muted); margin-bottom:10px; }
+.project-card ul, .experience-card ul, .mini-list { margin-left:18px; color:#cbd7ea; }
+.project-meta { color:#cbd7ea; font-size:0.92rem; margin-bottom:8px; }
+
+.experience-card { padding:20px; }
+.experience-header { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+.experience-role { color:var(--cyan); font-weight:700; }
+.experience-dates { color:var(--muted); }
+
+.edu-card, .cert-card { padding:18px; }
+.subtle { color:var(--muted); font-size:0.9rem; }
+.contact-list { display:grid; gap:10px; margin-top:12px; }
+.contact-item { display:flex; gap:10px; color:#d8e6fb; }
+.contact-item strong { color:var(--cyan); min-width:90px; }
+footer { padding:28px 0 44px; color:var(--muted); text-align:center; }
+
+/* Responsive tweaks */
+@media (max-width: var(--break-md)) {
+  .hero-grid, .grid-2, .grid-3 { grid-template-columns:1fr; }
+  .nav-links { display:none; }
+  .nav-toggle { display:inline-block; }
+}
+@media (max-width: var(--break-sm)) {
+  .hero { padding-top:48px; }
+  .hero-main, .hero-side, .about-box, .contact-box, .card, .project-card, .experience-card { padding:16px; }
+  .container { padding:0 16px; }
+  .gradient-text { font-size:1.05em; }
+}
+
+/* Reduced glows on small screens */
+@media (max-width:600px) { :root { --glow: 0 0 12px rgba(73,230,255,0.08); } }
+
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,10 +163,10 @@
           <div class="panel hero-main">
             <div class="icon-badge">LB</div>
             <div class="eyebrow">Data • Machine Learning • Engineering</div>
-            <h1><span class="gradient-text">Deploying production-grade AI/ML</span><br>for manufacturing quality, automation, and process reliability.</h1>
-            <div class="hero-role">AI/ML Engineer — production ML, MLOps, Python, SQL, FastAPI, Docker, AWS</div>
+            <h1><span class="gradient-text">Engineering AI-assisted workflows</span><br>for manufacturing analytics, quality systems, and operational efficiency.</h1>
+            <div class="hero-role">Manufacturing analytics engineer — Python, SQL, ERP/PLM integration, process optimization, automation</div>
             <p class="hero-summary">
-              I combine manufacturing process discipline and quality systems with production-focused machine learning. I design and deploy reproducible Python pipelines and model services integrated with ERP/PLM systems to reduce defects, improve throughput, and deliver measurable operational ROI.
+              I apply Python automation, analytics, and AI-assisted modeling to manufacturing operations, quality engineering, and ERP/PLM data workflows. I build grounded, deployment-aware solutions that support traceability, defect analysis, and process improvement in regulated production environments.
             </p>
             <div class="hero-actions">
               <a class="btn primary" href="#projects">View Projects</a>
@@ -75,12 +187,12 @@
             <div class="stat-card">
               <div class="stat-label">Core Stack</div>
               <div class="stat-value">Python • SQL • ML</div>
-              <div class="stat-text">Python, Pandas, SQL, Jupyter, scikit-learn, statistical analysis, and model evaluation.</div>
+              <div class="stat-text">Python, C++, SQL, Pandas, NumPy, Matplotlib, TensorFlow, scikit-learn, statistical analysis, and model evaluation.</div>
             </div>
             <div class="stat-card">
               <div class="stat-label">Domain Strength</div>
               <div class="stat-value">AI + Quality Systems</div>
-              <div class="stat-text">Bridging AI and analytics with regulated manufacturing, traceability, process discipline, and quality engineering.</div>
+              <div class="stat-text">Bridging AI, machine learning, and cloud analytics with quality engineering, process discipline, electronics inspection standards, and automated data integrity.</div>
             </div>
           </div>
         </div>
@@ -92,7 +204,7 @@
         <h2 class="section-title"><span class="section-icon">◈</span>About</h2>
         <div class="panel about-box">
           <p>
-            I’m an engineer who bridges regulated manufacturing and quality systems with production-oriented AI and analytics. My background includes receiving inspection, BOM/PLM and ERP integration, CNC programming, process optimization, and quality assurance under AS9100/ISO regimes. I build reproducible Python-driven data pipelines and ML services—focusing on deployment, monitoring, and measurable operational outcomes such as defect and scrap reduction, faster detection, and improved throughput.
+            I work at the intersection of manufacturing operations, quality engineering, and production analytics. I use SAP ERP and Siemens Teamcenter data to build Python/Pandas pipelines, SQL-based ERP extracts, and audit-ready KPI reporting for AS9100/ISO environments. My focus is on BOM lifecycle integrity, process optimization, and operational data workflows that support root-cause analysis, corrective action, and deployed ML-enabled decision support.
           </p>
         </div>
       </div>
@@ -103,63 +215,59 @@
         <h2 class="section-title"><span class="section-icon">⌘</span>Technical Skills</h2>
         <div class="grid-2">
           <div class="panel card">
-            <h3>Programming & Data Analysis</h3>
-            <p>Python-based analysis, data cleaning, exploration, SQL-oriented thinking, and notebook-driven workflows for business and technical problem solving.</p>
+            <h3>Industrial Data &amp; Analytics Engineering</h3>
+            <p>Design and deliver reliable enterprise data workflows using Python/Pandas and SQL against ERP/PLM systems, with a focus on KPI reporting, BOM integrity, and audit-ready quality data.</p>
             <div class="skill-list">
               <span class="tag">Python</span>
               <span class="tag">SQL</span>
               <span class="tag">Pandas</span>
-              <span class="tag">NumPy</span>
-              <span class="tag">Jupyter Notebook</span>
-              <span class="tag">EDA</span>
-              <span class="tag">Feature Engineering</span>
-              <span class="tag">Statistical Analysis</span>
-              <span class="tag">Hypothesis Testing</span>
-              <span class="tag">Data Visualization</span>
-              <span class="tag">Data Cleaning</span>
+              <span class="tag">SAP ERP</span>
+              <span class="tag">Siemens Teamcenter</span>
+              <span class="tag">BOM Management</span>
+              <span class="tag">Audit-Ready Reporting</span>
+              <span class="tag">KPI Analytics</span>
             </div>
           </div>
 
           <div class="panel card">
-            <h3>AI, Machine Learning &amp; MLOps</h3>
-            <p>Practical supervised learning workflows with growing focus on generative AI, deep learning concepts, model deployment thinking, and production-oriented AI systems.</p>
+            <h3>AI / ML &amp; Production Deployment</h3>
+            <p>Build and deploy ML-enabled services with model packaging, REST APIs, containerization, and monitoring for production readiness in operational environments.</p>
             <div class="skill-list">
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Generative AI</span>
-              <span class="tag">Deep Learning</span>
               <span class="tag">scikit-learn</span>
-              <span class="tag">Decision Trees</span>
-              <span class="tag">Random Forest</span>
-              <span class="tag">Logistic Regression</span>
-              <span class="tag">Model Evaluation</span>
-              <span class="tag">Hyperparameter Tuning</span>
-              <span class="tag">Train / Validation / Test Splits</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Docker</span>
               <span class="tag">MLOps</span>
+              <span class="tag">AWS</span>
+              <span class="tag">Model Monitoring</span>
             </div>
           </div>
 
           <div class="panel card">
-            <h3>Manufacturing & Quality Systems</h3>
-            <p>Experience supporting regulated, documentation-heavy environments with quality and traceability needs.</p>
+            <h3>Manufacturing Operations &amp; Quality Systems</h3>
+            <p>Operate within AS9100/ISO 9001 manufacturing and quality systems, applying root-cause analysis, RMA analytics, lean problem solving, and traceability across production data.</p>
             <div class="skill-list">
               <span class="tag">AS9100</span>
               <span class="tag">ISO 9001</span>
-              <span class="tag">KPI Tracking</span>
               <span class="tag">Root Cause Analysis</span>
-              <span class="tag">Lean Manufacturing</span>
-              <span class="tag">Documentation Control</span>
+              <span class="tag">RMA Analytics</span>
+              <span class="tag">Lean Six Sigma</span>
+              <span class="tag">Manufacturing Analytics</span>
+              <span class="tag">Process Optimization</span>
             </div>
           </div>
 
           <div class="panel card">
-            <h3>Systems & Operations</h3>
-            <p>Cross-functional support across engineering systems, production environments, and technical communication.</p>
+            <h3>Operational Systems &amp; Engineering Tooling</h3>
+            <p>Support production systems with API-driven tooling, CI/CD-ready services, CAD/DXF workflow coordination, and ERP/PLM integration that improves data integrity and execution.</p>
             <div class="skill-list">
-              <span class="tag">SAP ERP</span>
-              <span class="tag">Teamcenter PLM</span>
-              <span class="tag">BOM Management</span>
-              <span class="tag">CNC Programming</span>
-              <span class="tag">AOI Inspection</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Audit Workflows</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">CAD / DXF Workflows</span>
               <span class="tag">Process Optimization</span>
             </div>
           </div>
@@ -219,16 +327,21 @@
             <div class="project-top">
               <div>
                 <div class="project-type">Machine Learning API</div>
-                <h3>House Price Prediction API</h3>
+                <h3>Operational KPI &amp; RMA Analytics — Manzi Metals</h3>
               </div>
             </div>
             <p>
-              Built a FastAPI application to predict U.S. housing prices using machine learning.
+              Built an operational analytics pipeline to extract, reconcile, and publish audit-ready KPIs from SAP ERP and RMA logs. The system enabled timely root-cause analysis of material defects and supported AS9100/ISO quality enforcement across production workflows.
             </p>
-            <p class="project-meta"><strong>Tech:</strong> Python, scikit-learn, FastAPI, joblib, Docker</p>
-            <p class="project-meta"><strong>Deployment:</strong> Containerized API with prediction and health-check endpoints; ready for CI/CD</p>
+            <p class="project-meta"><strong>Tech:</strong> Python, Pandas, SQL (ERP extracts), RMA analytics, BOM reconciliation</p>
+            <p class="project-meta"><strong>Deployment:</strong> Reproducible ETL scripts and scheduled data extracts delivering audit-ready KPI tables for downstream reporting and investigations</p>
             <ul>
-              <li>Includes endpoints for predictions, model info, and health checks</li>
+              <li>Designed SQL extraction and flattening routines against SAP ERP tables to assemble transactional and procurement records</li>
+              <li>Implemented Python/Pandas pipelines to standardize mixed-unit inventory, reconcile BOM data, and compute KPIs (OTD, purchasing velocity, RMA rates)</li>
+              <li>Created anomaly detection workflows using rule-based and statistical thresholds to surface vendor deviations for RCA</li>
+              <li>Delivered audit-ready datasets with full traceability; maintained 100% precision for business-critical KPI reporting (zero reporting variances under audit)</li>
+              <li>Resolved data scale and fragmentation anomalies to support over $5M in account velocity and improve operational decision-making</li>
+            </ul>
               <li>Uses scikit-learn, joblib, and REST API structure</li>
               <li>Containerized with Docker for deployment</li>
             </ul>
@@ -311,10 +424,11 @@
               <div class="experience-dates">2024 - Present</div>
             </div>
             <ul>
-              <li>Perform receiving inspections, validate certifications, and maintain AS9100 and ISO compliance</li>
-              <li>Analyze KPIs to identify inefficiencies and support improvement efforts</li>
-              <li>Resolve quality issues through supplier communication and root cause thinking</li>
-              <li>Support documentation accuracy, material traceability, and engineering change control</li>
+              <li>Architect and execute SQL-based ERP queries to extract, flatten, and validate transactional, procurement, shipping, and quality records.</li>
+              <li>Build Python/Pandas data preparation and aggregation workflows for operational KPIs including OTD, purchasing velocity, and RMA tracking.</li>
+              <li>Maintain audit-ready data integrity across AS9100 and ISO 9001 quality records, certifications, traceability, and inspection documentation.</li>
+              <li>Reconcile fragmented enterprise datasets across mixed inventory units including LB, EA, FT, and IN to prevent reporting errors.</li>
+              <li>Analyze RMA logs, supplier deviations, and material defect patterns to support root-cause analysis and corrective action.</li>
             </ul>
           </div>
 
@@ -327,10 +441,10 @@
               <div class="experience-dates">2024 - Present</div>
             </div>
             <ul>
-              <li>Support customers with material sourcing, pricing, and order coordination</li>
-              <li>Communicate technical material requirements and documentation expectations clearly</li>
-              <li>Balance delivery, quality, and customer service across active orders</li>
-              <li>Contributed to documentation-focused support on a NASA supply program</li>
+              <li>Support over $5M in account velocity by coordinating customer requirements, material sourcing, pricing, delivery expectations, and documentation needs.</li>
+              <li>Translate customer material specifications into actionable procurement, quality, and fulfillment requirements.</li>
+              <li>Coordinate RFQs, supplier follow-ups, delivery updates, and certification requirements across active aerospace and industrial orders.</li>
+              <li>Balance customer service, technical documentation, quality expectations, and delivery performance across high-value material accounts.</li>
             </ul>
           </div>
 
@@ -358,9 +472,9 @@
               <div class="experience-dates">2023 - 2024</div>
             </div>
             <ul>
-              <li>Operated SMT machinery in accordance with IPC and aerospace standards</li>
-              <li>Conducted AOI inspections and supported corrective actions to reduce recurring defects</li>
-              <li>Applied lean manufacturing discipline to support production quality and consistency</li>
+              <li>Executed IPC-compliant SMT setup and AOI workflows for aerospace-grade PCB assemblies.</li>
+              <li>Validated inspection results and captured defect data to support root-cause analysis and process correction.</li>
+              <li>Applied lean manufacturing discipline and manufacturing analytics to improve line quality and reduce repeat defects.</li>
             </ul>
           </div>
 
@@ -373,11 +487,11 @@
               <div class="experience-dates">2017 - 2023</div>
             </div>
             <ul>
-              <li>Maintained BOM accuracy using SAP ERP and Teamcenter PLM systems</li>
-              <li>Used process analysis to identify bottlenecks and improve production flow</li>
-              <li>Programmed CNC machines and optimized machining workflows</li>
-              <li>Supported engineering validation, documentation updates, and cross-functional execution</li>
-              <li>Led improvement efforts focused on scrap reduction, downtime reduction, and workflow stability</li>
+              <li>Managed hierarchical BOM data and configuration matrices in SAP ERP and Siemens Teamcenter PLM to maintain engineering change control and material traceability.</li>
+              <li>Led Lean Six Sigma process optimization efforts in the plastics production line, reducing shift handoffs and improving throughput efficiency.</li>
+              <li>Programmed CNC machine workflows and coordinated CAD/DXF data transformation for production toolpath execution.</li>
+              <li>Supported cross-functional validation, documentation control, and Kaizen-driven corrective actions for audit-ready manufacturing operations.</li>
+              <li>Directed material procurement coordination, inventory validation, and supply chain follow-up to prevent production bottlenecks during engineering change cycles.</li>
             </ul>
           </div>
         </div>
@@ -431,5 +545,30 @@
       <p>© 2026 Larry Butler. Built with a modern tech-style portfolio layout.</p>
     </div>
   </footer>
+  <script>
+  // Inlined script.js - mobile nav toggle
+  document.addEventListener('DOMContentLoaded', function(){
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if(!toggle || !links) return;
+    toggle.addEventListener('click', function(){
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      if(!expanded){
+        links.style.display = 'block';
+      } else {
+        links.style.display = 'none';
+      }
+    });
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 980){
+        links.style.display = '';
+        toggle.setAttribute('aria-expanded','false');
+      } else if(toggle.getAttribute('aria-expanded') === 'false'){
+        links.style.display = 'none';
+      }
+    });
+  });
+  </script>
 </body>
 </html>
