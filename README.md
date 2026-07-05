@@ -30,6 +30,27 @@ Technologies used:
 Project repository:
 https://github.com/mrbutler35-wq/telecom-plan-recommendation-ml
 
+### Automated End-to-End MLOps Pipeline for Heart Disease Classification
+Production-grade MLOps pipeline for heart disease classification with reproducible data versioning, CI/CD validation, robust test coverage, model governance, and drift monitoring.
+
+Technologies used:
+- Python
+- DVC
+- GitHub Actions
+- Pytest
+- MLflow
+- Evidently AI
+
+Key highlights:
+- Data decoupling from Git via .dvc pointer metadata
+- Multi-stage CI/CD automation for tests, environment validation, and dynamic data flow
+- 11-point test matrix for preprocessing, feature matching, and config constraints
+- MLflow experiment tracking with deployment gate at 80% minimum accuracy
+- Feature drift thresholding at 25% share to prevent model degradation
+
+Project repository:
+https://github.com/mrbutler35-wq/heart-disease
+
 ### IMDB Data Analysis
 Data exploration and analysis of IMDB movie data using Python and Pandas to generate insights on top-rated films.
 

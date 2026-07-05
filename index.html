@@ -330,6 +330,30 @@ footer { padding:28px 0 44px; color:var(--muted); text-align:center; }
           <article class="panel project-card">
             <div class="project-top">
               <div>
+                <div class="project-type">MLOps</div>
+                <h3>Automated End-to-End MLOps Pipeline for Heart Disease Classification</h3>
+              </div>
+            </div>
+            <p>
+              Developed a production-oriented MLOps workflow for heart disease classification, integrating data lineage, CI/CD enforcement, automated testing, experiment governance, and post-training drift surveillance to preserve deployment quality over time.
+            </p>
+            <p class="project-meta"><strong>Tech:</strong> Python, DVC, GitHub Actions, Pytest, MLflow, Evidently AI</p>
+            <p class="project-meta"><strong>Deployment:</strong> Automated CI/CD with quality gates, experiment tracking, and drift-triggered safeguards for release readiness</p>
+            <ul>
+              <li>Implemented Data Version Control (DVC) with strict raw-data decoupling from Git using standard .dvc pointer metadata structures</li>
+              <li>Built a multi-stage CI/CD workflow in GitHub Actions to run test suites, validate environments, and stream data dynamically across pipeline stages</li>
+              <li>Created an 11-point Pytest matrix to validate preprocessing logic, feature alignment fidelity, and configuration boundary limits</li>
+              <li>Integrated MLflow model governance with full experiment logging and a programmatic performance gate that blocks deployment below 80% accuracy</li>
+              <li>Added Evidently AI drift monitoring for feature distribution shifts (including age and blood pressure), enforcing a 25% drift-share threshold to prevent model degradation</li>
+            </ul>
+            <div class="hero-actions" style="margin-top: 10px;">
+              <a class="btn secondary" href="https://github.com/mrbutler35-wq/heart-disease" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </article>
+
+          <article class="panel project-card">
+            <div class="project-top">
+              <div>
                 <div class="project-type">Data Analysis</div>
                 <h3>IMDB Data Analysis Project</h3>
               </div>
@@ -346,6 +370,8 @@ footer { padding:28px 0 44px; color:var(--muted); text-align:center; }
               <li>Documented work clearly in Jupyter Notebook for readability and reproducibility</li>
               <li>Strengthened debugging, data storytelling, and analytical reasoning skills</li>
             </ul>
+          </article>
+
           <article class="panel project-card">
             <div class="project-top">
               <div>
@@ -364,9 +390,6 @@ footer { padding:28px 0 44px; color:var(--muted); text-align:center; }
               <li>Created anomaly detection workflows using rule-based and statistical thresholds to surface vendor deviations for RCA</li>
               <li>Delivered audit-ready datasets with full traceability; maintained 100% precision for business-critical KPI reporting (zero reporting variances under audit)</li>
               <li>Resolved data scale and fragmentation anomalies to support over $5M in account velocity and improve operational decision-making</li>
-            </ul>
-              <li>Uses scikit-learn, joblib, and REST API structure</li>
-              <li>Containerized with Docker for deployment</li>
             </ul>
             <div class="hero-actions" style="margin-top: 10px;">
               <a class="btn secondary" href="https://github.com/mrbutler35-wq/house_price_api" target="_blank" rel="noopener noreferrer">View Project</a>
