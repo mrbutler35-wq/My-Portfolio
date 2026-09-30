@@ -561,7 +561,7 @@ footer { padding:28px 0 44px; color:var(--muted); text-align:center; }
               Built a supervised machine learning model to predict whether a telecom customer would choose the Ultra mobile plan based on monthly usage behavior including calls, minutes, messages, and internet traffic. The project demonstrates classification modeling, structured evaluation, and practical business-focused decision support.
             </p>
             <p class="project-meta"><strong>Tech:</strong> Python, Pandas, scikit-learn, Jupyter</p>
-            <p class="project-meta"><strong>Deployment:</strong> Reproducible training scripts and model artifacts; ready for serving behind an API</p>
+            <p class="project-meta"><strong>Workflow:</strong> Reproducible Jupyter-based machine learning workflow with documented dependencies, structured model comparison, and validation/test evaluation.</p>
             <ul>
               <li>Prepared and analyzed structured customer usage data using Python, Pandas, and Jupyter Notebook</li>
               <li>Split data into training, validation, and test sets for proper model evaluation</li>
@@ -602,42 +602,47 @@ footer { padding:28px 0 44px; color:var(--muted); text-align:center; }
           <article class="panel project-card">
             <div class="project-top">
               <div>
-                <div class="project-type">Data Analysis</div>
-                <h3>IMDB Data Analysis Project</h3>
+                <div class="project-type">Natural Language Processing</div>
+                <h3>Film Junky — IMDb Sentiment Classification</h3>
               </div>
             </div>
             <p>
-              Explored entertainment data to uncover trends in highly rated films, actor presence, and release-period patterns while practicing structured data cleaning and reusable analysis logic.
+              Developed an NLP solution to classify IMDb movie reviews as positive or negative sentiment. Evaluated multiple text-classification approaches using F1 Score, ROC-AUC, precision, and recall across a dataset of 47,331 movie reviews.
             </p>
-            <p class="project-meta"><strong>Tech:</strong> Python, Pandas, Jupyter</p>
-            <p class="project-meta"><strong>Deployment:</strong> Analysis notebooks and reusable functions; documented data pipeline for reproducibility</p>
+            <p class="project-meta"><strong>Tech:</strong> Python, Pandas, NumPy, scikit-learn, NLTK, TF-IDF, Logistic Regression, LightGBM, BERT, Matplotlib</p>
+            <p class="project-meta"><strong>Results:</strong> Best F1 Score: 0.89; ROC-AUC: approximately 0.95–0.96</p>
             <ul>
-              <li>Cleaned and standardized raw data using Pandas</li>
-              <li>Built reusable functions for decade filtering, score categorization, and actor extraction</li>
-              <li>Performed exploratory analysis to identify top-rated content patterns</li>
-              <li>Documented work clearly in Jupyter Notebook for readability and reproducibility</li>
-              <li>Strengthened debugging, data storytelling, and analytical reasoning skills</li>
+              <li>Preprocessed and analyzed 47,331 IMDb movie reviews for binary sentiment classification.</li>
+              <li>Applied NLP preprocessing, text cleaning, feature engineering, and vectorization techniques.</li>
+              <li>Evaluated multiple machine learning and NLP approaches.</li>
+              <li>Achieved a best F1 Score of 0.89 using TF-IDF with Logistic Regression.</li>
+              <li>Evaluated performance using F1, ROC-AUC, precision, and recall.</li>
+              <li>Demonstrated NLP model comparison and sentiment prediction on custom review examples.</li>
             </ul>
+            <div class="hero-actions" style="margin-top: 10px;">
+              <a class="btn secondary" href="https://github.com/mrbutler35-wq/Film-junky" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
           </article>
 
           <article class="panel project-card">
             <div class="project-top">
               <div>
                 <div class="project-type">Machine Learning API</div>
-                <h3>Operational KPI &amp; RMA Analytics — Manzi Metals</h3>
+                <h3>House Price Prediction API</h3>
               </div>
             </div>
             <p>
-              Built an operational analytics pipeline to extract, reconcile, and publish audit-ready KPIs from SAP ERP and RMA logs. The system enabled timely root-cause analysis of material defects and supported AS9100/ISO quality enforcement across production workflows.
+              Built a production-ready FastAPI service that predicts U.S. apartment prices using a trained Random Forest regression model. The API provides real-time predictions from 13 property features with structured input validation, health monitoring, model metadata, automated testing, error handling, and containerized deployment.
             </p>
-            <p class="project-meta"><strong>Tech:</strong> Python, Pandas, SQL (ERP extracts), RMA analytics, BOM reconciliation</p>
-            <p class="project-meta"><strong>Deployment:</strong> Reproducible ETL scripts and scheduled data extracts delivering audit-ready KPI tables for downstream reporting and investigations</p>
+            <p class="project-meta"><strong>Tech:</strong> Python, FastAPI, scikit-learn, Random Forest, NumPy, Joblib, Pydantic, Pytest, Docker</p>
+            <p class="project-meta"><strong>Deployment:</strong> Containerized REST API using Docker and Docker Compose with automated testing, service health checks, model metadata endpoints, and reproducible local deployment.</p>
             <ul>
-              <li>Designed SQL extraction and flattening routines against SAP ERP tables to assemble transactional and procurement records</li>
-              <li>Implemented Python/Pandas pipelines to standardize mixed-unit inventory, reconcile BOM data, and compute KPIs (OTD, purchasing velocity, RMA rates)</li>
-              <li>Created anomaly detection workflows using rule-based and statistical thresholds to surface vendor deviations for RCA</li>
-              <li>Delivered audit-ready datasets with full traceability; maintained 100% precision for business-critical KPI reporting (zero reporting variances under audit)</li>
-              <li>Resolved data scale and fragmentation anomalies to support over $5M in account velocity and improve operational decision-making</li>
+              <li>Developed a FastAPI REST service serving predictions from a trained Random Forest Regressor.</li>
+              <li>Implemented Pydantic validation across 13 property features.</li>
+              <li>Added /health, /model/info, and /predict endpoints for monitoring, model information, and inference.</li>
+              <li>Added automated tests for API behavior, model loading, validation, and prediction responses.</li>
+              <li>Containerized the application with Docker and Docker Compose.</li>
+              <li>Implemented structured error handling and model/service health monitoring.</li>
             </ul>
             <div class="hero-actions" style="margin-top: 10px;">
               <a class="btn secondary" href="https://github.com/mrbutler35-wq/house_price_api" target="_blank" rel="noopener noreferrer">View Project</a>
