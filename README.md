@@ -32,8 +32,54 @@ A professional portfolio website highlighting engineering, data analytics, and m
 - Pytest
 - MLflow
 - Evidently AI
+- TensorFlow
+- Keras
+- ResNet50
+- FastAPI
+- Docker
+- C++
+- CMake
+- SciPy
+- Statistical analysis
+- AWS PartyRock
 
 ## Projects Featured
+
+### Face Age Estimation with ResNet50
+
+Computer vision age-estimation system using TensorFlow and ResNet50 transfer learning for image regression, augmentation, GPU-oriented training, MAE evaluation, and reproducible model-development tooling.
+
+**Verified details:** 7,591 labeled facial images, 224×224 image input, ImageNet-pretrained ResNet50, and best historical validation MAE of 5.93 years.
+
+**Project repository:** <https://github.com/mrbutler35-wq/face-age-estimation-resnet50>
+
+### Titanic Survival Prediction API
+
+End-to-end machine learning system that trains a Random Forest survival classifier and serves predictions through FastAPI with reusable preprocessing, model persistence, Docker support, and automated API testing.
+
+**Current validated model:** Accuracy 0.8436, precision 0.8475, recall 0.7246, and F1-score 0.7812 on a 179-passenger holdout test set.
+
+**Project repository:** <https://github.com/mrbutler35-wq/titanic-ml-project>
+
+### Mental Health Relapse Prevention Planner
+
+Generative AI application for creating a personalized early-warning system using triggers, warning signs, coping strategies, support networks, strengths, and values, with real-time check-ins and personalized guidance.
+
+This is a supportive AI application and does not provide therapy, diagnosis, medical treatment, or clinical decision-making.
+
+**Launch app:** <https://partyrock.aws/u/LarryAI/FzeQd7nDL/Mental-Health-Relapse-Prevention-Planner>
+
+### ForgeWorks — Manufacturing Engineering Toolkit
+
+Modular C++ manufacturing engineering toolkit for material-weight calculations, dimensional tolerance inspection, engineering unit conversions, and process variance analysis, with automated calculation testing.
+
+**Project repository:** <https://github.com/mrbutler35-wq/ForgeWorks>
+
+### Telecom Revenue & Customer Behavior Analytics
+
+Python analytics project examining telecom customer behavior, monthly service usage, plan economics, revenue patterns, and regional differences using reproducible billing logic and statistical hypothesis testing across 2,293 customer-month observations.
+
+**Project repository:** <https://github.com/mrbutler35-wq/telecom-revenue-analytics>
 
 ### ForgeIQ — Operations Intelligence Platform
 
